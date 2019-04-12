@@ -33,7 +33,7 @@
 <br>
 	<!-- telszam input-->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="nev">nev</label>
+	  <label class="col-md-4 control-label" for="nev" required="">nev</label>
 	  <div class="col-md-4">
 	  <input id="nev" name="nev" type="text" placeholder="john doe" class="form-control input-md">
 		<label for="exampleForm2">telefonszám : </label>
@@ -43,8 +43,11 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="email">email cim:</label>
 	  <div class="col-md-4">
-	     <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+	     <input id="email" type="text" class="form-control" id="email" placeholder="Email" onchange="ValidateEmail()" required="">
 	  <span class="help-block">email cim pl.: johndoe@zmail.com </span>
+    <div class="alert alert-danger" id="badmail" role="alert" hidden="true">
+  email cim nem megfelelő!!
+</div>
 	  </div>
 	</div>
 	<!-- cim text-->
@@ -74,10 +77,10 @@
 	  <div class="col-md-4">
 			<div class = "a-menu">
 	    <label class="checkbox-inline" for="menu-0">
-	      <input type="checkbox" name="menu" id="menu-0" value="A" required onchange="valid()" >
+	      <input type="checkbox" name="menu" id="menu-0" value="A"  onchange="valid()" >
 	      A
 
-				
+
 				<input type="number" id="a-menyi"  min="1" max="5" disabled= "true"  value="1" onchange="valid()" >
 	    </label>
 		</div>

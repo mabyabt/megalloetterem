@@ -1,6 +1,13 @@
 
 function init(){
 
+  document.getElementById('nev').value ="";
+  document.getElementById('teszam').value ="";
+  document.getElementById('email').value ="";
+  document.getElementById('cim').value ="";
+  document.getElementById('cim-egyeb').value ="";
+
+
 document.getElementById('menu-0').checked =false;
 document.getElementById('menu-1').checked =false;
 document.getElementById('menu-2').checked =false;
@@ -48,7 +55,26 @@ function valid() {
 
           }
 
+}
 
 
+function getemail(){
 
+  return document.getElementById('email').value;
+
+
+}
+
+ function ValidateEmail()
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(getemail()))
+  {
+    return (true)
+    document.getElementById('badmail').hidden = true;
+
+  }
+
+  document.getElementById('badmail').hidden = false;
+    //alert("email cim nem megfelelő")
+    return (false)
 }
