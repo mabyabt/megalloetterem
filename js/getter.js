@@ -32,7 +32,7 @@ console.log(uzenet);
 function getemail(){
 
 email = document.getElementById('email').value;
-
+return email;
 }
 
 function getName(){
@@ -40,5 +40,19 @@ function getName(){
   cim = document.getElementById('cim').value;
 nev = document.getElementById('nev').value;
 extra = document.getElementById('cim-egyeb').value;
+
+}
+
+function getuzenet(){
+
+return uzenet;
+
+}
+
+
+function  finish(){
+
+document.getElementById('massage').value = getuzenet();
+
 
 }
