@@ -69,8 +69,9 @@ function getemail(){
 {
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(getemail()))
   {
-    return (true)
     document.getElementById('badmail').hidden = true;
+
+    return (true)
 
   }
 

@@ -3,7 +3,17 @@
 <head>
 
 
- <meta charset="UTF-8">
+
+
+
+
+
+<meta charset="UTF-8">
+
+
+
+
+<!-- bootstrap -->
 
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,8 +22,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+<!-- js -->
+
 <script src="js/valid.js"></script>
 <script src="js/getter.js"></script>
+
+
+<!-- php -->
+
+
+
 
 
 </head>
@@ -24,7 +43,7 @@
 
 
 <center>
-	<form class="form-horizontal">
+	<form class="form-horizontal"  action="https://formspree.io/matuzb97@gmail.com" method="POST">
 	<fieldset>
 
 	<!-- Form Name -->
@@ -33,21 +52,24 @@
 <br>
 	<!-- telszam input-->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="nev" required="">nev</label>
+	  <label class="col-md-4 control-label" for="nev" required="">nev: </label>
 	  <div class="col-md-4">
 	  <input id="nev" name="nev" type="text" placeholder="john doe" class="form-control input-md">
 		<label for="exampleForm2">telefonszám : </label>
-		<input type="text" id="teszam" placeholder="06707725564" class="form-control">
+		<input type="text" id="teszam"  name="telefonszam" placeholder="06707725564" class="form-control">
 	  </div>
 	</div>
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="email">email cim:</label>
 	  <div class="col-md-4">
-	     <input id="email" type="text" class="form-control" id="email" placeholder="Email" onchange="ValidateEmail()" required="">
-	  <span class="help-block">email cim pl.: johndoe@zmail.com </span>
-    <div class="alert alert-danger" id="badmail" role="alert" hidden="true">
-  email cim nem megfelelő!!
-</div>
+	     <input id="email" type="text" class="form-control" id="email" name = "email" placeholder="Email" onchange="ValidateEmail()" required="">
+
+  <div class="alert alert-danger" id="badmail" role="alert" hidden="true">
+    email cim nem megfelelő!!
+  </div>
+    <span class="help-block">email cim pl.: johndoe@zmail.com </span>
+
+
 	  </div>
 	</div>
 	<!-- cim text-->
@@ -55,14 +77,16 @@
 	  <label class="col-md-4 control-label" for="cim">Kiszálitási cim: </label>
 	  <div class="col-md-4">
 	    <div class="input-group">
-	      <span class="input-group-addon">szeged</span>
-	      <input id="cim" name="cim" class="form-control" placeholder="Kőzépfasor 1-3" type="text" required="">
+	      <span class="input-group-addon">
+              Szeged
+        </span>
+	      <input id="cim" name="cim"  class="form-control"  placeholder="Kőzépfasor 1-3" type="text" required="">
 	    </div>
 	    <p class="help-block">help</p>
 	  </div>
-		<label for="form7">egyéb</label>
-		<div class="md-form" style=" width: 50%;">
-		  <textarea id="cim-egyeb" class="md-textarea form-control" rows="3"></textarea>
+		<label for="form7"  >egyéb</label>
+		<div class="md-form" style=" width: 35%;">
+		  <textarea id="cim-egyeb" name="info"  class="md-textarea form-control" rows="3"></textarea>
 
 		</div>
 
@@ -72,6 +96,7 @@
 	</div>
 
 	<!-- rendeles Checkboxes -->
+
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="menu">választott menu: </label>
 	  <div class="col-md-4">
@@ -81,30 +106,34 @@
 	      A
 
 
-				<input type="number" id="a-menyi"  min="1" max="5" disabled= "true"  value="1" onchange="valid()" >
+				<input type="number" id="a-menyi"  name="A_db" min="1" max="5" disabled= "true"  value="1" onchange="valid()" >
 	    </label>
 		</div>
 			<div class = "b-menu">
 	    <label class="checkbox-inline" for="menu-1">
 	      <input type="checkbox" name="menu" id="menu-1" value="B"  onchange="valid()">
 	      B
-				<input type="number" id="b-menyi"  min="1" max="5" value="1" disabled= "true" >
+				<input type="number" id="b-menyi" name="B_db" min="1" max="5" value="1" disabled= "true" >
 	    </label>
 		</div>
 			<div class ="c-menu">
 	    <label class="checkbox-inline" for="menu-2">
 	      <input type="checkbox" name="menu" id="menu-2" value="C" onchange="valid()" >
-	      C
-				<input type="number" id="c-menyi"  min="1" max="5" disabled= "true" value="1" onchange="valid()" >
+	      C:
+				<input type="number" id="c-menyi" name="c db" min="1" max="5" disabled= "true" value="1" onchange="valid()" >
 	    </label>
 	  </div>
 	</div>
 
-	</fieldset>
+</fieldset>
+
+  <textarea id="massage" class="md-textarea form-control" rows="3" hidden="true">
+  </textarea>
+
 	<br>
 	<br>
 
-<button type="button" class="btn btn-primary" style=" width: 30%;" onclick="getData()" > Kész </button>
+<button type="submit" value="Send" class="btn btn-primary" style=" width: 30%;" onclick="finish()" > Kész </button>
 <br>
 <br>
 <br>
