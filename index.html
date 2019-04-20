@@ -10,7 +10,7 @@
 
 <meta charset="UTF-8">
 
-
+<link rel="manifest" href="manifest.webmanifest">
 
 
 <!-- bootstrap -->
@@ -38,7 +38,9 @@
 </head>
 <body  onload="init()"  style = " background-image: url('img/bg.jpg');" >
 
-
+<title>
+megallo etterem
+</title>
 
 
 
@@ -52,22 +54,22 @@
 <br>
 	<!-- telszam input-->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="nev" required="">nev: </label>
+	  <label class="col-md-4 control-label" for="nev" required="">Név: </label>
 	  <div class="col-md-4">
 	  <input id="nev" name="_subject" type="text" placeholder="john doe" class="form-control input-md">
-		<label for="exampleForm2">telefonszám : </label>
+		<label for="exampleForm2">Telefonszám : </label>
 		<input type="text" id="teszam"  name="telefonszam" placeholder="06707725564" class="form-control">
 	  </div>
 	</div>
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="email">email cim:</label>
+	  <label class="col-md-4 control-label" for="email">Email cim:</label>
 	  <div class="col-md-4">
 	     <input id="email" type="text" class="form-control" id="email" name = "email" placeholder="Email" onchange="ValidateEmail()" required="">
 
   <div class="alert alert-danger" id="badmail" role="alert" hidden="true">
-    email cim nem megfelelő!!
+    Email cim nem megfelelő!!
   </div>
-    <span class="help-block">email cim pl.: johndoe@zmail.com </span>
+    <span class="help-block">Email cim pl.: johndoe@zmail.com </span>
 
 <input type="hidden" name="_language" value="hu" />
 	  </div>
@@ -82,9 +84,9 @@
         </span>
 	      <input id="cim" name="cim"  class="form-control"  placeholder="Kőzépfasor 1-3" type="text" required="">
 	    </div>
-	    <p class="help-block">help</p>
+	    <p class="help-block">Szeged </p>
 	  </div>
-		<label for="form7"  >egyéb</label>
+		<label for="form7"  >Egyéb:</label>
 		<div class="md-form" style=" width: 35%;">
 		  <textarea id="cim-egyeb" name="info"  class="md-textarea form-control" rows="3"></textarea>
 
@@ -98,7 +100,7 @@
 	<!-- rendeles Checkboxes -->
 
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="menu">választott menu: </label>
+	  <label class="col-md-4 control-label" for="menu">Rendelés: </label>
 	  <div class="col-md-4">
 			<div class = "a-menu">
 	    <label class="checkbox-inline" for="menu-0">
@@ -119,7 +121,7 @@
 			<div class ="c-menu">
 	    <label class="checkbox-inline" for="menu-2">
 	      <input type="checkbox" name="menu" id="menu-2" value="C" onchange="valid()" >
-	      C:
+	      C
 				<input type="number" id="c-menyi" name="c db" min="1" max="5" disabled= "true" value="1" onchange="valid()" >
 	    </label>
 	  </div>
